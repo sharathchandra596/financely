@@ -7,6 +7,7 @@ import { auth, db } from "../firebase/firebase";
 import { addDoc, collection, getDocs, query } from "firebase/firestore";
 import { toast } from "react-toastify";
 import { useEffect, useState } from "react";
+import TransactionTable from "../components/TransactionsTable/TransactionTable";
 
 function Dashboard() {
   const [transactions, setTransactions] = useState([]);
@@ -56,7 +57,7 @@ function Dashboard() {
   useEffect(() => {
     fetchTransactions();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [user]);
 
   async function fetchTransactions() {
     setLoading(true);
@@ -117,6 +118,7 @@ function Dashboard() {
           </div>
         )}
       </>
+      <TransactionTable transactions={transactions}/>
     </div>
   );
 }
