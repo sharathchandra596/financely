@@ -8,6 +8,8 @@ import { addDoc, collection, getDocs, query } from "firebase/firestore";
 import { toast } from "react-toastify";
 import { useEffect, useState } from "react";
 import TransactionTable from "../components/TransactionsTable/TransactionTable";
+import Charts from "../components/Charts";
+
 
 function Dashboard() {
   const [transactions, setTransactions] = useState([]);
@@ -103,6 +105,7 @@ function Dashboard() {
     setTotalbalnce(totalIncome-totalExpenses)
 
   }
+ 
 
   return (
     <div>
@@ -118,7 +121,16 @@ function Dashboard() {
           </div>
         )}
       </>
+      {transactions.length !=0 ?<>
+        <Charts transactions={transactions} />
       <TransactionTable transactions={transactions}/>
+      </>: 
+      <div className="flex flex-col justify-center items-center">
+      <img className=" h-[50vh]  w-80" src="public\Credit card-rafiki.png" alt="img"/>
+      <p className="text-2xl text-blue-600">No Transactions available</p>
+      </div>
+
+      }
     </div>
   );
 }

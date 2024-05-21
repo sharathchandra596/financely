@@ -17,6 +17,14 @@ const firebaseConfig = {
   messagingSenderId: "803831417249",
   appId: "1:803831417249:web:fd809d0a673485531a63e0"
 };
+// const firebaseConfig = {
+//   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+//   authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+//   projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+//   storageBucket: "financely-d8c25.appspot.com",
+//   messagingSenderId: "803831417249",
+//   appId: import.meta.env.VITE_FIREBASE_APP_ID
+// };
 
 
 
