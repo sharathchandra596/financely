@@ -126,7 +126,7 @@ function Dashboard() {
       <TransactionTable transactions={transactions}/>
       </>: 
       <div className="flex flex-col justify-center items-center">
-      <img className=" h-[50vh]  w-80" src="public\Credit card-rafiki.png" alt="img"/>
+      <img className=" h-[50vh]  w-80" src="https://cdn.dribbble.com/users/8925263/screenshots/16869159/media/bd048f9ae4c3c4f005bffd1612d85bb3.png" alt="img"/>
       <p className="text-2xl text-blue-600">No Transactions available</p>
       </div>
 
