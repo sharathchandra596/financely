@@ -9,24 +9,16 @@ import { getFirestore,doc,setDoc } from "firebase/firestore";
 
 
 // Your web app's Firebase configuration
-// const firebaseConfig = {
-//   apiKey: "AIzaSyCSJEwBye2yl3CoYF-ReEiVOhWGnRblyJ8",
-//   authDomain: "financely-d8c25.firebaseapp.com",
-//   projectId: "financely-d8c25",
-//   storageBucket: "financely-d8c25.appspot.com",
-//   messagingSenderId: "803831417249",
-//   appId: "1:803831417249:web:fd809d0a673485531a63e0"
-// };
-
-// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
-  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  apiKey: "AIzaSyCSJEwBye2yl3CoYF-ReEiVOhWGnRblyJ8",
+  authDomain: "financely-d8c25.firebaseapp.com",
+  projectId: "financely-d8c25",
   storageBucket: "financely-d8c25.appspot.com",
   messagingSenderId: "803831417249",
-  appId: import.meta.env.VITE_FIREBASE_APP_ID
+  appId: "1:803831417249:web:fd809d0a673485531a63e0"
 };
+
+
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
